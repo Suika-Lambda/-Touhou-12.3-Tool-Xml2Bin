@@ -45,8 +45,8 @@ $$警告：此项目完全由 AI 生成（除了README.md）$$
 
 注：
 - `SKMP` 为角色/物体Binary文件魔数
-`SKAP` 为粒子效果Binary文件魔数
-`SKSP` 为使用`-CombineSprite`的Binary文件魔数
+- `SKAP` 为粒子效果Binary文件魔数
+- `SKSP` 为使用`-CombineSprite`的Binary文件魔数
 
 - `SKSP`（`-CombineSprite` 精灵合并）结构同 `SKAP`，仅魔数不同：
    - 头部 **cloneCount** 槽位 = 动画名在字符串表中的索引（第 0 项即 "default"）
