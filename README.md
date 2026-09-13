@@ -10,7 +10,7 @@ $$警告：此项目完全由 AI 生成（除了README.md）$$
 | `-Recurse` | 自动搜索`-InputPath`指定文件夹路径下的所有子目录 |
 | `-Verify` | 处理完当前文件的所有`段`的时候，自动校验Bin文件 |
 | `-CombineSprite <folder_path>` | 根据指定文件夹路径下的所有图片文件，生成一个Bin文件（动画名称默认为default） |
-| `-Extension <ext_name>` | 可自定义扩展名，不带此启动项默认为`.bmp`，留空字符串则不添加扩展名 |
+| `-Extension <ext_name>`（前提是使用`-CombineSprite`） | 可自定义扩展名，不带此启动项默认为`.bmp`，留空字符串则不添加扩展名 |
 | `-ParticleSuffix <suffix>`| 自定义粒子效果Bin文件的后缀（默认为_p） |
 | `-LayoutSuffix <suffix>`| 自定义界面布局txt文件的后缀（默认为_layout） |
 | `-Strict`| 出现警告即报错（默认仅警告并跳过） |
@@ -23,7 +23,7 @@ $$警告：此项目完全由 AI 生成（除了README.md）$$
 
 > 注：Layout 文件仅在xml内有 `layout` 字段才能生成
 
-### Binary 格式小端序：
+### Binary 格式 (小端序)：
     Header(32B): "SKMP"/"SKAP"/"SKSP", u16 version=1, u16 headerSize=32,
                  u32 stringCount, u32 stringTableOffset(=32), u32 cloneCount,
                  u32 recordCount, u32 totalFrames, u32 dataOffset
@@ -54,5 +54,6 @@ $$警告：此项目完全由 AI 生成（除了README.md）$$
 ### 杂项：
 1. 通常来说，Bin的大小应约为源文件的 **20%~30%** 大小，过大和过小都不正常
 2. 每个 Layout 文件都有相对的说明
+4. 目前仅有 `-CombineSprite` 启动项支持 `-Extension` 修改后缀名
 
 (c) 2026 LGC No rights reserved
