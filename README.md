@@ -57,3 +57,4 @@ $$警告：此项目完全由 AI 生成（除了README.md）$$
 4. 目前仅有 `-CombineSprite` 启动项支持 `-Extension` 修改后缀名
 
 (c) 2026 LGC No rights reserved
+Codes wrote by Deepseek
